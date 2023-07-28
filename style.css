@@ -6,88 +6,103 @@ body{
 .centralbody{
     height: 100vh;
     width: 100%;
-    background-color: pink
+    background-color: pink;
     display: flex;
     justify-content: center; 
     align-items: center; 
     position: relative;
 }
 .cameraFrame{
-    height: 62%;
-    width: 43%;
+    height: 60%;
+    width: 85%;
     z-index: 2;
     position: absolute;
     top: 40%; 
     left: 50%; 
     transform: translate(-50%, -50%);
-    opacity: 1; 
+    opacity: 0.3;
     
 }
 .viewfinder{
-    height: 6%;
-    width: 4.2%;
+    height: 5.2%;
+    width: 8.3%;
     background-color: green;
-    top: 23%;
-    left: 44%;
+    top: 24%;
+    left: 38.2%;
     z-index: 1;
     position: absolute;
 }
 .cameraScreen{
-    height: 32.7%;
-    width: 21.6%;
+    height: 29.6%;
+    width: 43%;
+    max-width: 1273px;
     background-color: aqua;
     position: absolute;
-    top: 35.4%;
-    left: 34%;
+    top: 35.8%;
+    left: 18.2%;
     z-index: 1;
 }
 .button1{
     height: 4.1%;
-    width: 2.2%;
+    width: 4.7%;
     position: absolute;
     z-index: 3;
-    top: 36.4%;
-    left: 30.9%;
+    top: 36.5%;
+    left: 12.2%;
     border-radius: 50%;
     background-color: red;
+    opacity: 0.3;
 }
 
 .button2{
     height: 4.1%;
-    width: 2.2%;
+    width: 4.7%;
     position: absolute;
     z-index: 3;
     top: 43%;
-    left: 30.9%;
+    left: 12.2%;
     border-radius: 50%;
     background-color: yellow;
+    opacity: 0.3;
 }
 
 .button3{
     height: 4.1%;
-    width: 2.2%;
+    width: 4.7%;
     position: absolute;
     z-index: 3;
-    top: 49.7%;
-    left: 30.9%;
+    top: 49.5%;
+    left: 12.2%;
     border-radius: 50%;
     background-color: purple;
+    opacity: 0.3;
 }
 .button4{
     height: 4.1%;
-    width: 2.2%;
+    width: 4.7%;
     position: absolute;
     z-index: 3;
-    top: 56.4%;
-    left: 30.9%;
+    top: 55.8%;
+    left: 12.2%;
     border-radius: 50%;
     background-color: orange;
+    opacity: 0.3;
 }
 .seeMore{
     width: 8%;
-    height: 2.5%;
+    height: 2%;
     background-color: red;
     position: absolute;
-    top: 32%;
-    left: 19%;
+    top: 33%;
+    left:1%;
+    font-size: 110%;
+    text-align: center;
 }
+
+@media (min-width: 2501px) {
+    .centralbody {
+      max-width: 2500px;
+      max-height: 5000px;
+      margin: 0 auto; /* Center the content on the screen */
+    }
+  }
