@@ -13,6 +13,7 @@ body{
 .frame{
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 .mainscreen{
     height: 44.1%;
@@ -29,4 +30,45 @@ body{
     background-color: red;
     top: 23.2%;
     left: 36.8%;
+}
+.button1{
+    height: 5.8%;
+    width: 5%;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top: 40.1%;
+    left: 7%;
+    border: 3px solid purple;
+}
+.menuDrop{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 20%;
+    background-color: pink;
+    z-index: 2;
+    top: 37%;
+    left: 15%;
+}
+.button2{
+    height: 5.6%;
+    width: 5%;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top: 50.8%;
+    left: 7%;
+    border: 3px solid teal;
+}
+.button3{
+    height: 5.2%;
+    width: 4.5%;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top: 83.4%;
+    left: 72.2%;
+    border: 3px solid yellow;
 }
