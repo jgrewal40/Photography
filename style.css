@@ -25,26 +25,50 @@ body{
 }
 .cars{
     height: 100%;
-    background-color: black;
+    background-color: pink;
     top: 130px;
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1000px;
+    gap: 40px;
+    justify-content: space-between;
 }
 .leftpic{
     position: relative;
     background-color: red;
     height: 450px;
-    width: 50%;
+    width: 48%;
     margin-top: -93px;
 }
 .rightpic{
     position: relative;
     height: 450px;
-    width: 50%;
+    width: 48%;
     background-color: green;
     left: 50%;
     margin-top: -93px;
+    right: 100%;
+}
+.carpics{
+    width: 100%;
+    height: auto;
+}
+
+.people{
+    width: 100%;
+    height: 1000px;
+    background-color: orange;
+    top: 200px;
+    position: relative;
+}
+.cameraFrame{
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 800px;
+    margin: 0 auto;
+    background-color: aqua;
+    position: relative;
 }
