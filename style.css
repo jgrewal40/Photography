@@ -1,29 +1,34 @@
-body{
+body {
     margin: 0;
     background-color: black;
 }
-.headerHover{
+
+.headerHover {
     width: 100%;
     height: 80px;
     background-color: pink;
     display: flex;
     flex-direction: row;
 }
-.header{
+
+.header {
     height: 0px;
     width: 100%;
     background-color: green;
     transition: height .9s;
 }
-.headActive{
+
+.headActive {
     height: 40px;
 }
-.objective{
+
+.objective {
     width: 100%;
     height: 500px;
     background-color: blue;
 }
-.cars{
+
+.cars {
     height: 100%;
     background-color: pink;
     top: 130px;
@@ -35,35 +40,39 @@ body{
     gap: 40px;
     justify-content: space-between;
 }
-.leftpic{
+
+.leftpic {
     position: relative;
     background-color: red;
     height: 450px;
-    width: 48%;
+    width: 49%;
     margin-top: -93px;
 }
-.rightpic{
+
+.rightpic {
     position: relative;
     height: 450px;
-    width: 48%;
+    width: 49%;
     background-color: green;
-    left: 50%;
     margin-top: -93px;
-    right: 100%;
+    right: -51%;
+    float: right;
 }
-.carpics{
+
+.carpics {
     width: 100%;
     height: auto;
 }
 
-.people{
+.people {
     width: 100%;
     height: 1000px;
     background-color: orange;
     top: 200px;
     position: relative;
 }
-.cameraFrame{
+
+.camerabox {
     width: 100%;
     height: 100%;
     max-width: 1000px;
@@ -71,4 +80,19 @@ body{
     margin: 0 auto;
     background-color: aqua;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+.frame {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+.screen{
+    width: 47.6%;
+    height: 43.2%;
+    position: absolute;
+    left: 18.2%;
+    top: 41.4%;
+    background-color: yellow;
 }
