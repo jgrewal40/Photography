@@ -12,7 +12,6 @@ let naturecollapse = document.querySelectorAll(".picturecollapse");
 let natureIndex = 0;
 
 function natureHover(){
-    console.log(naturecollapse.length);
     naturecollapse.forEach(pic => {
         pic.classList.remove("pictureactive");
     });
@@ -23,6 +22,30 @@ function natureHover(){
     else{
         natureIndex++;
     }
-    console.log("jatt");
 }
 setInterval(natureHover, 2000);
+
+const screenpics = ['assets/frame.png', 'assets/secondoption.png'];
+let screenIndex = 0;
+
+function changepic(direction){
+ if(direction == 'left'){
+    if(screenIndex == 0){
+        screenIndex = screenpics.length - 1;
+    }
+    else{
+    screenIndex--;
+    }
+ }
+ if(direction == 'right'){
+    if(screenIndex == screenpics.length - 1){
+        screenIndex = 0;
+    }
+    else{
+    screenIndex++;
+    }
+ }
+let currentpic = document.getElementById("framepic");
+currentpic.src = screenpics[screenIndex];
+console.log(screenIndex);
+}
