@@ -31,14 +31,13 @@ body {
 .cars {
     height: 100%;
     background-color: pink;
-    top: 130px;
+    top: 80px;
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1100px;
-    gap: 40px;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .leftpic {
@@ -46,7 +45,10 @@ body {
     background-color: red;
     height: 450px;
     width: 49%;
-    margin-top: -93px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: 500ms;
 }
 
 .rightpic {
@@ -54,9 +56,15 @@ body {
     height: 450px;
     width: 49%;
     background-color: green;
-    margin-top: -93px;
     right: -51%;
-    float: right;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 500ms;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 .carpics {
@@ -98,7 +106,8 @@ body {
     top: 42.1%;
     background-color: yellow;
 }
-.screenpic{
+
+.screenpic {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -125,14 +134,15 @@ body {
     border: radius;
 }
 
-.nature{
+.nature {
     width: 100%;
     height: 1000px;
     background-color: magenta;
     top: 120px;
     position: relative;
 }
-.natureContainer{
+
+.natureContainer {
     width: 100%;
     height: 100%;
     max-width: 1100px;
@@ -145,7 +155,8 @@ body {
     background-color: bisque;
     gap: 3px;
 }
-.picturecollapse{
+
+.picturecollapse {
     width: 100%;
     height: 4.5%;
     background-color: red;
@@ -153,8 +164,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition:  1.2s ease-in-out;
+    transition: 1.2s ease-in-out;
 }
-.pictureactive{
+
+.pictureactive {
     height: 100%;
+}
+.placeholder{
+    height: 2000px;
+    width: 100%;
+    background-color: blanchedalmond;
 }
