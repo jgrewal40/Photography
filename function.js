@@ -77,22 +77,22 @@ function changepic(direction) {
 
 
 
-const cars = document.querySelectorAll('.leftpic');
-const carsl = document.querySelectorAll('.rightpic');
+// const cars = document.querySelectorAll('.leftpic');
+// const carsl = document.querySelectorAll('.rightpic');
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("show", entry.isIntersecting);
-    })
-},
-{
-    threshold: 0.3,
-}
-)
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         entry.target.classList.toggle("show", entry.isIntersecting);
+//     })
+// },
+// {
+//     threshold: 0.3,
+// }
+// )
 
-cars.forEach(car => {
-    observer.observe(car);
-})
-carsl.forEach(carl =>{
-    observer.observe(carl);
-})
+// cars.forEach(car => {
+//     observer.observe(car);
+// })
+// carsl.forEach(carl =>{
+//     observer.observe(carl);
+// })
