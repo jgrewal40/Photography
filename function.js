@@ -19,9 +19,9 @@ function headCollapse() {
 
 
 let naturecollapse = document.querySelectorAll(".picturecollapse");
-let natureIndex = 0;
+let natureIndex = 1;
 
-function natureHover() {
+function naturecycle() {
     naturecollapse.forEach(pic => {
         pic.classList.remove("pictureactive");
     });
@@ -33,9 +33,25 @@ function natureHover() {
         natureIndex++;
     }
 }
-setInterval(natureHover, 2000);
+let autofunction = setInterval(naturecycle, 2000);
+console.log(autofunction);
 
+function naturehover(id){
+    clearInterval(autofunction);
+    console.log(autofunction);
+    const temp = document.getElementById(id);
+    naturecollapse.forEach(pic => {
+        pic.classList.remove("pictureactive");
+    });
+    temp.classList.add("pictureactive");
+    natureIndex = id;
 
+}
+
+function natureOnLeave(){
+    clearInterval(autofunction);
+    autofunction = setInterval(naturecycle, 2000);
+}
 
 
 
@@ -77,22 +93,31 @@ function changepic(direction) {
 
 
 
-// const cars = document.querySelectorAll('.leftpic');
-// const carsl = document.querySelectorAll('.rightpic');
+const cars = document.querySelectorAll('.leftpic');
+const carsl = document.querySelectorAll('.rightpic');
+const wordl = document.querySelectorAll('wordleft');
+const wordr = document.querySelectorAll('wordright');
 
-// const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         entry.target.classList.toggle("show", entry.isIntersecting);
-//     })
-// },
-// {
-//     threshold: 0.3,
-// }
-// )
 
-// cars.forEach(car => {
-//     observer.observe(car);
-// })
-// carsl.forEach(carl =>{
-//     observer.observe(carl);
-// })
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+    })
+},
+{
+    threshold: 0.3,
+}
+)
+
+cars.forEach(car => {
+    observer.observe(car);
+})
+carsl.forEach(carl =>{
+    observer.observe(carl);
+})
+wordl.forEach(word =>{
+    observer.observe(word);
+})
+wordr.forEach(word =>{
+    observer.observe(word);
+})
