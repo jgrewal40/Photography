@@ -95,8 +95,8 @@ function changepic(direction) {
 
 const cars = document.querySelectorAll('.leftpic');
 const carsl = document.querySelectorAll('.rightpic');
-const wordl = document.querySelectorAll('wordleft');
-const wordr = document.querySelectorAll('wordright');
+const wordl = document.querySelectorAll('.wordleft');
+const wordr = document.querySelectorAll('.wordright');
 
 
 const observer = new IntersectionObserver(entries => {
@@ -108,6 +108,8 @@ const observer = new IntersectionObserver(entries => {
     threshold: 0.3,
 }
 )
+
+
 
 cars.forEach(car => {
     observer.observe(car);
