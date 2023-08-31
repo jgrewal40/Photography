@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="style.css">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         photography
     </title>
@@ -16,7 +17,9 @@
         <img src="assets\frame.png" class="profilePic">
     </div>
 
-    <div class="objective"></div>
+    <div class="objective">
+        
+    </div>
 
     <div class="aboutme">
     </div>
@@ -24,33 +27,39 @@
     <div class="cars">
         <div class="section">
             <div class="leftpic">
-                <img src="assets\frame.png" class="carpics">
+                <img src="cars\erv.jpg" class="carpics">
             </div>
             <div class="wordright">BIG BODY BENZ</div>
         </div>
         <div class="section">
             <div class="rightpic">
-                <img src="assets\frame.png" class="carpics">
+                <img src="cars\senna.jpg" class="carpics">
             </div>
             <div class="wordleft">BIG BODY BENZ</div>
         </div>
         <div class="section">
             <div class="leftpic">
-                <img src="assets\frame.png" class="carpics">
+                <img src="cars\stang.jpg" class="carpics">
             </div>
             <div class="wordright">BIG BODY BENZ</div>
         </div>
         <div class="section">
             <div class="rightpic">
-                <img src="assets\frame.png" class="carpics">
+                <img src="cars\audi quatro.jpg" class="carpics">
             </div>
             <div class="wordleft">BIG BODY BENZ</div>
         </div>
         <div class="section">
             <div class="leftpic">
-                <img src="assets\frame.png" class="carpics">
+                <img src="cars\pagani.jpg" class="carpics">
             </div>
             <div class="wordright">BIG BODY BENZ</div>
+        </div>
+        <div class="section">
+            <div class="rightpic">
+                <img src="cars\sennaroller.jpg" class="carpics">
+            </div>
+            <div class="wordleft">BIG BODY BENZ</div>
         </div>
     </div>
 
@@ -58,7 +67,7 @@
         <div class="camerabox">
             <img src="assets\frame.png" class="frame">
             <div class="screen">
-                <img src="assets\secondoption.png" class="screenpic" id="framepic">
+                <img src="people\alisha stadium.jpg" class="screenpic" id="framepic">
             </div>
             <div class="nextButton" onclick="changepic('right')"></div>
             <div class="backButton" onclick="changepic('left')"></div>
@@ -67,12 +76,25 @@
 
     <div class="nature">
         <div class="natureContainer">
-            <div class="picturecollapse pictureactive" id="0" onpointerenter="naturehover(0)" onpointerleave="natureOnLeave()"></div>
-            <div class="picturecollapse" id="1" onpointerenter="naturehover(1)" onpointerleave="natureOnLeave()"></div>
-            <div class="picturecollapse" id="2" onpointerenter="naturehover(2)" onpointerleave="natureOnLeave()"></div>
-            <div class="picturecollapse" id="3" onpointerenter="naturehover(3)" onpointerleave="natureOnLeave()"></div>
+            <div class="picturecollapse pictureactive" id="0" onpointerenter="naturehover(0)" onpointerleave="natureOnLeave()">
+                <img src="nature\forestwalk.jpg" class="naturediv">
+            </div>
+            <div class="picturecollapse" id="1" onpointerenter="naturehover(1)" onpointerleave="natureOnLeave()">
+                <img src="nature\indiahome.jpg" class="naturediv">
+            </div>
+            <div class="picturecollapse" id="2" onpointerenter="naturehover(2)" onpointerleave="natureOnLeave()">
+                <img src="nature\pots.jpg" class="naturediv">
+            </div>
+            <div class="picturecollapse" id="3" onpointerenter="naturehover(3)" onpointerleave="natureOnLeave()">
+                <img src="nature\akira grass.jpg" class="naturediv">
+            </div>
+            <div class="picturecollapse" id="4" onpointerenter="naturehover(4)" onpointerleave="natureOnLeave()">
+                <img src="nature\snorlax.jpg" class="naturediv">
+            </div>
         </div>
     </div>
+
+    <div class="contact"></div>
 
     <script src="function.js"></script>
 </body>

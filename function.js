@@ -62,7 +62,7 @@ function natureOnLeave(){
 
 
 
-const screenpics = ['assets/frame.png', 'assets/secondoption.png'];
+const screenpics = ['people/alisha stadium.jpg', 'people/aman.jpg','people/DSC_3555-Enhanced-NR.jpg','people/priya & sonnan.jpg', 'people/ratan.jpg' ];
 let screenIndex = 0;
 
 function changepic(direction) {
