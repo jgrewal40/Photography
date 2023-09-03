@@ -36,19 +36,27 @@ function naturecycle() {
 let autofunction = setInterval(naturecycle, 2000);
 console.log(autofunction);
 
-function naturehover(id){
-    clearInterval(autofunction);
-    console.log(autofunction);
-    const temp = document.getElementById(id);
-    naturecollapse.forEach(pic => {
-        pic.classList.remove("pictureactive");
-    });
-    temp.classList.add("pictureactive");
-    natureIndex = id;
+let canGo = false;
 
+function setTrue(){
+    canGo = true;
 }
 
-function natureOnLeave(){
+function naturehover(id) {
+    if (canGo == true) {
+        clearInterval(autofunction);
+        const temp = document.getElementById(id);
+        naturecollapse.forEach(pic => {
+            pic.classList.remove("pictureactive");
+        });
+        temp.classList.add("pictureactive");
+        natureIndex = id;
+        canGo = false;
+    }
+    setTimeout(setTrue, 600);
+}
+
+function natureOnLeave() {
     clearInterval(autofunction);
     autofunction = setInterval(naturecycle, 2000);
 }
@@ -62,7 +70,7 @@ function natureOnLeave(){
 
 
 
-const screenpics = ['people/alisha stadium.jpg', 'people/aman.jpg','people/DSC_3555-Enhanced-NR.jpg','people/priya & sonnan.jpg', 'people/ratan.jpg' ];
+const screenpics = ['people/alisha stadium.jpg', 'people/aman.jpg', 'people/DSC_3555-Enhanced-NR.jpg', 'people/priya & sonnan.jpg', 'people/ratan.jpg'];
 let screenIndex = 0;
 
 function changepic(direction) {
@@ -104,9 +112,9 @@ const observer = new IntersectionObserver(entries => {
         entry.target.classList.toggle("show", entry.isIntersecting);
     })
 },
-{
-    threshold: 0.3,
-}
+    {
+        threshold: 0.3,
+    }
 )
 
 
@@ -114,12 +122,12 @@ const observer = new IntersectionObserver(entries => {
 cars.forEach(car => {
     observer.observe(car);
 })
-carsl.forEach(carl =>{
+carsl.forEach(carl => {
     observer.observe(carl);
 })
-wordl.forEach(word =>{
+wordl.forEach(word => {
     observer.observe(word);
 })
-wordr.forEach(word =>{
+wordr.forEach(word => {
     observer.observe(word);
 })
