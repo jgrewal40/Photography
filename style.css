@@ -160,12 +160,15 @@ body {
     background-color: aqua;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.frame {
+/* .frame {
     width: 100%;
     height: auto;
+    z-index: 3;
 }
 
 .screen {
@@ -178,7 +181,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    z-index: 2;
+} */
 
 .screenpic {
     width: 100%;
@@ -195,6 +199,7 @@ body {
     top: 52.7%;
     left: 81.4%;
     opacity: 0.5;
+    z-index: 3;
 }
 
 .backButton {
@@ -205,7 +210,7 @@ body {
     top: 52.7%;
     left: 72.6%;
     opacity: 0.5;
-    border: radius;
+    z-index: 3;
 }
 
 .nature {
@@ -256,6 +261,21 @@ body {
     width: 100%;
     background-color: yellow;
 }
+.wrappertest{
+    filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
+    position: absolute;
+    z-index: 6;
+    background-color: green;
+}
+.clipbutton{
+    background: #FB8C00;
+    padding: 2rem 3rem 2rem 4rem;
+    position: absolute;
+    z-index: 6;
+}
+
+/* <path d="M200,450 L150,400 Q200,300 150,200 L200,150 Q300,300 200,450" fill="green" stroke="green" /> */
+
 
 
 
@@ -338,18 +358,22 @@ body {
         height: 50%;
         width: 100%;
     }
+
     .people {
         height: 50%;
     }
+
     .naturediv {
         height: 500px;
         width: 100%;
     }
+
     .pictureactive {
         height: 50%;
         overflow: hidden;
     }
-    .screen{
+
+    .screen {
         height: 44.4%;
     }
 }
