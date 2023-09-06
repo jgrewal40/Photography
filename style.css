@@ -191,7 +191,7 @@ body {
     margin: 0 auto;
 }
 
-.nextButton {
+/* .nextButton {
     position: absolute;
     background-color: purple;
     height: 9.1%;
