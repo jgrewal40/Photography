@@ -1,7 +1,20 @@
 body {
     margin: 0;
     background-color: black;
-    /* background-image: url(assets/AdobeStock_412647539.jpeg); */
+    background-image: url(assets/AdobeStock_412647539.jpeg);
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 5fr);
+    row-gap: 150px;
+    background-color: blueviolet;
+    justify-items: center;
+    align-content:start;
 }
 
 .headerHover {
@@ -145,24 +158,51 @@ body {
 
 .people {
     width: 100%;
-    height: 1000px;
     background-color: orange;
     top: 200px;
     position: relative;
 }
-.peoplebody{
+
+.peoplebody {
     height: 100%;
     width: 100%;
-    display: flex;
     background-color: gray;
     max-width: 1100px;
     position: relative;
     margin: 0 auto;
 }
-.portraitfull{
-    height: 50%;
-    width: 50%;
-    background-color: khaki;
+.shadow{
+    height: 130%;
+    width: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    top: 50px;
+    box-shadow: 0px 95px 90px -20px rgba(165, 112, 13, 0.5);
+}
+
+.portraits {
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    transition: 500ms;
+    transform: translateY(20px);
+}
+.portraitup{
+    transform: translateY(10px);
+}
+
+.fullportrait {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 0%;
+    border: none;
+    z-index: 2;
+    object-fit: contain;
 }
 
 .nature {

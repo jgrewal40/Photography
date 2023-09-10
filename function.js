@@ -9,6 +9,24 @@ function headCollapse() {
 }
 
 
+const pics = document.querySelectorAll('.portraits')
+
+function hoverlisten(){
+    pics.forEach(pic => {
+        pic.addEventListener('mouseenter', () => {
+            console.log("jattup");
+            pic.classList.add('portraitup');
+        })
+        pic.addEventListener('mouseleave', () => {
+            console.log("jattdown");
+            pic.classList.remove('portraitup');
+        })
+    })
+}
+
+hoverlisten();
+
+
 
 
 
@@ -63,44 +81,6 @@ function natureOnLeave() {
 
 
 
-
-
-
-
-
-
-
-const screenpics = ['people/alisha stadium.jpg', 'people/aman.jpg', 'people/DSC_3555-Enhanced-NR.jpg', 'people/priya & sonnan.jpg', 'people/ratan.jpg'];
-let screenIndex = 0;
-
-function changepic(direction) {
-    if (direction == 'left') {
-        if (screenIndex == 0) {
-            screenIndex = screenpics.length - 1;
-        }
-        else {
-            screenIndex--;
-        }
-    }
-    if (direction == 'right') {
-        if (screenIndex == screenpics.length - 1) {
-            screenIndex = 0;
-        }
-        else {
-            screenIndex++;
-        }
-    }
-    let currentpic = document.getElementById("framepic");
-    currentpic.src = screenpics[screenIndex];
-    console.log(screenIndex);
-}
-
-
-
-
-
-
-
 const cars = document.querySelectorAll('.leftpic');
 const carsl = document.querySelectorAll('.rightpic');
 const wordl = document.querySelectorAll('.wordleft');
@@ -110,6 +90,7 @@ const wordr = document.querySelectorAll('.wordright');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
+        if(entry.isIntersecting)observer.unobserve(entry.target);
     })
 },
     {
