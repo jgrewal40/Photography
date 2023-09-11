@@ -14,16 +14,13 @@ const pics = document.querySelectorAll('.portraits')
 function hoverlisten(){
     pics.forEach(pic => {
         pic.addEventListener('mouseenter', () => {
-            console.log("jattup");
             pic.classList.add('portraitup');
         })
         pic.addEventListener('mouseleave', () => {
-            console.log("jattdown");
             pic.classList.remove('portraitup');
         })
     })
 }
-
 hoverlisten();
 
 
@@ -39,20 +36,19 @@ hoverlisten();
 let naturecollapse = document.querySelectorAll(".picturecollapse");
 let natureIndex = 1;
 
-function naturecycle() {
-    naturecollapse.forEach(pic => {
-        pic.classList.remove("pictureactive");
-    });
-    naturecollapse[natureIndex].classList.add("pictureactive");
-    if (natureIndex >= naturecollapse.length - 1) {
-        natureIndex = 0;
-    }
-    else {
-        natureIndex++;
-    }
-}
-let autofunction = setInterval(naturecycle, 2000);
-console.log(autofunction);
+// function naturecycle() {
+//     naturecollapse.forEach(pic => {
+//         pic.classList.remove("pictureactive");
+//     });
+//     naturecollapse[natureIndex].classList.add("pictureactive");
+//     if (natureIndex >= naturecollapse.length - 1) {
+//         natureIndex = 0;
+//     }
+//     else {
+//         natureIndex++;
+//     }
+// }
+// let autofunction = setInterval(naturecycle, 10000);
 
 let canGo = false;
 
