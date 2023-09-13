@@ -9,73 +9,6 @@ function headCollapse() {
 }
 
 
-const pics = document.querySelectorAll('.portraits')
-
-function hoverlisten(){
-    pics.forEach(pic => {
-        pic.addEventListener('mouseenter', () => {
-            pic.classList.add('portraitup');
-        })
-        pic.addEventListener('mouseleave', () => {
-            pic.classList.remove('portraitup');
-        })
-    })
-}
-hoverlisten();
-
-
-
-
-
-
-
-
-
-
-
-let naturecollapse = document.querySelectorAll(".picturecollapse");
-let natureIndex = 1;
-
-// function naturecycle() {
-//     naturecollapse.forEach(pic => {
-//         pic.classList.remove("pictureactive");
-//     });
-//     naturecollapse[natureIndex].classList.add("pictureactive");
-//     if (natureIndex >= naturecollapse.length - 1) {
-//         natureIndex = 0;
-//     }
-//     else {
-//         natureIndex++;
-//     }
-// }
-// let autofunction = setInterval(naturecycle, 10000);
-
-let canGo = false;
-
-function setTrue(){
-    canGo = true;
-}
-
-function naturehover(id) {
-    if (canGo == true) {
-        clearInterval(autofunction);
-        const temp = document.getElementById(id);
-        naturecollapse.forEach(pic => {
-            pic.classList.remove("pictureactive");
-        });
-        temp.classList.add("pictureactive");
-        natureIndex = id;
-        canGo = false;
-    }
-    setTimeout(setTrue, 600);
-}
-
-function natureOnLeave() {
-    clearInterval(autofunction);
-    autofunction = setInterval(naturecycle, 2000);
-}
-
-
 
 const cars = document.querySelectorAll('.leftpic');
 const carsl = document.querySelectorAll('.rightpic');
@@ -108,3 +41,38 @@ wordl.forEach(word => {
 wordr.forEach(word => {
     observer.observe(word);
 })
+
+
+
+
+const pics = document.querySelectorAll('.portraits')
+
+function hoverlisten(){
+    pics.forEach(pic => {
+        pic.addEventListener('mouseenter', () => {
+            pic.classList.add('portraitup');
+        })
+        pic.addEventListener('mouseleave', () => {
+            pic.classList.remove('portraitup');
+        })
+    })
+}
+hoverlisten();
+
+const nature = document.querySelectorAll('.picturecollapse');
+
+function naturehover(){
+    console.log("jatt");
+    nature.forEach(np =>{
+        np.addEventListener('click', () =>{
+            if (!np.classList.contains('pictureactive')){
+                const temp = np;
+                nature.forEach(npr =>{
+                    npr.classList.remove('pictureactive');
+                    temp.classList.add('pictureactive');
+                })
+            }
+        })
+    })
+}
+naturehover();
