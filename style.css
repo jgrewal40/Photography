@@ -232,14 +232,14 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: bisque;
-    gap: 3px;
+    gap: 7px;
 }
 
 .picturecollapse {
     width: 100%;
     height: 4.5%;
     background-color: red;
-    transition: 1.2s ease-in-out;
+    transition: 400ms ease-in-out;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -251,6 +251,11 @@ body {
 
 .pictureactive {
     height: 100%;
+}
+
+.naturehighlight{
+    border: 4px solid rgb(247, 2, 2);
+
 }
 
 .contact {
@@ -343,5 +348,10 @@ body {
         right: 0;
         height: 50%;
         width: 100%;
+    }
+}
+@media(max-width: 500px){
+    .naturediv {
+        height: 425px;
     }
 }

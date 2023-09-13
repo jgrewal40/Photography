@@ -59,10 +59,34 @@ function hoverlisten(){
 }
 hoverlisten();
 
-const nature = document.querySelectorAll('.picturecollapse');
 
+
+
+const natprev = document.querySelectorAll('.naturediv');
+function natpreview(){
+    console.log("katter");
+    natprev.forEach(nat => {
+        nat.addEventListener('mouseenter', () =>{
+            nat.classList.add('naturehighlight');
+            const temp = nat.parentElement;
+            console.log(temp.classList);
+            if(!temp.classList.contains('pictureactive')){
+                nat.classList.add('naturehighlight');
+            }
+            else{
+                nat.classList.remove('naturehighlight');
+            }
+        nat.addEventListener('mouseleave', () =>{
+            nat.classList.remove('naturehighlight');
+        })
+        })
+    })
+}
+natpreview();
+
+
+const nature = document.querySelectorAll('.picturecollapse');
 function naturehover(){
-    console.log("jatt");
     nature.forEach(np =>{
         np.addEventListener('click', () =>{
             if (!np.classList.contains('pictureactive')){
@@ -70,6 +94,8 @@ function naturehover(){
                 nature.forEach(npr =>{
                     npr.classList.remove('pictureactive');
                     temp.classList.add('pictureactive');
+                    const child = temp.querySelector('.naturediv');
+                    child.classList.remove('naturehighlight');
                 })
             }
         })
