@@ -19,7 +19,7 @@ const wordr = document.querySelectorAll('.wordright');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
-        if(entry.isIntersecting)observer.unobserve(entry.target);
+        if (entry.isIntersecting) observer.unobserve(entry.target);
     })
 },
     {
@@ -43,42 +43,63 @@ wordr.forEach(word => {
 })
 
 
+const lbimages = document.querySelectorAll('.portraits');
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox);
 
 
-const pics = document.querySelectorAll('.portraits')
-
-function hoverlisten(){
-    pics.forEach(pic => {
-        pic.addEventListener('mouseenter', () => {
-            pic.classList.add('portraitup');
-        })
-        pic.addEventListener('mouseleave', () => {
-            pic.classList.remove('portraitup');
-        })
+lbimages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        const pic = document.createElement('img')
+        pic.src = img.src;
+        while(lightbox.firstChild){
+            lightbox.removeChild(lightbox.firstChild);
+        }
+        lightbox.appendChild(pic);
     })
-}
-hoverlisten();
+})
+
+lightbox.addEventListener('click', e => {
+    if(e.target !== e.currentTarget){
+        return;
+    }
+    lightbox.classList.remove('active');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 const natprev = document.querySelectorAll('.naturediv');
-function natpreview(){
-    console.log("katter");
+function natpreview() {
     natprev.forEach(nat => {
-        nat.addEventListener('mouseenter', () =>{
+        nat.addEventListener('mouseenter', () => {
             nat.classList.add('naturehighlight');
             const temp = nat.parentElement;
             console.log(temp.classList);
-            if(!temp.classList.contains('pictureactive')){
+            if (!temp.classList.contains('pictureactive')) {
                 nat.classList.add('naturehighlight');
             }
-            else{
+            else {
                 nat.classList.remove('naturehighlight');
             }
-        nat.addEventListener('mouseleave', () =>{
-            nat.classList.remove('naturehighlight');
-        })
+            nat.addEventListener('mouseleave', () => {
+                nat.classList.remove('naturehighlight');
+            })
         })
     })
 }
@@ -86,12 +107,12 @@ natpreview();
 
 
 const nature = document.querySelectorAll('.picturecollapse');
-function naturehover(){
-    nature.forEach(np =>{
-        np.addEventListener('click', () =>{
-            if (!np.classList.contains('pictureactive')){
+function naturehover() {
+    nature.forEach(np => {
+        np.addEventListener('click', () => {
+            if (!np.classList.contains('pictureactive')) {
                 const temp = np;
-                nature.forEach(npr =>{
+                nature.forEach(npr => {
                     npr.classList.remove('pictureactive');
                     temp.classList.add('pictureactive');
                     const child = temp.querySelector('.naturediv');
@@ -102,3 +123,4 @@ function naturehover(){
     })
 }
 naturehover();
+
