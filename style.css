@@ -1,26 +1,20 @@
 body {
     margin: 0;
     background-color: black;
-    /* background-image: url(assets/AdobeStock_615179335.jpeg); */
+    background-image: url(assets/AdobeStock_615179335.jpeg);
 }
 
-.wrapper {
-    height: 100%;
-    width: 100%;
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 5fr);
-    row-gap: 150px;
-    background-color: blueviolet;
-    justify-items: center;
-    align-content:start;
+
+.spaceholder{
+    height: 600px;
+    width: 1100px;
+    background-color: green;
 }
 
 .headerHover {
     width: 100%;
     height: 70px;
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -47,14 +41,34 @@ body {
     background-color: blue;
     max-width: 1100px;
     margin: 0 auto;
+    top: 70px;
+    position: relative;
+}
+.mebox{
+    width: 100%;
+    height: 500px;
+    background-color: red;
     display: flex;
-    flex-direction: column;
+    position: relative;
+}
+.title{
+    width: 70%;
+    height: 500px;
+    background-color: purple;
+}
+.profilebox{
+    width: 30%;
+    height: 500px;
+    background-color: orange;
+    position: relative;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .profilePic {
     width: 250px;
-    height: 250px;
+    height: 310px;
     position: relative;
     margin: 0 auto;
     border: groove 15px white;
@@ -64,11 +78,20 @@ body {
 .aboutme {
     height: 400px;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
-    top: 15px;
+    top: 85px;
+}
+.aboutmetext{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .objective {
@@ -77,7 +100,7 @@ body {
     max-width: 1100px;
     position: relative;
     margin: 0 auto;
-    top: 30px;
+    top: 110px;
     /* color: white; */
     background-color: aquamarine;
 }
@@ -85,7 +108,7 @@ body {
 .cars {
     height: 100%;
     background-color: pink;
-    top: 80px;
+    top: 140px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -111,7 +134,7 @@ body {
     transition: 500ms;
 }
 
-.wordright {
+.wordrightbox {
     width: 36%;
     height: auto;
     text-align: center;
@@ -121,8 +144,17 @@ body {
     transition: 500ms;
     background: purple;
 }
+.word{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+}
 
-.wordleft {
+
+.wordleftbox {
     width: 36%;
     position: relative;
     right: 64%;
@@ -160,7 +192,7 @@ body {
 .people {
     width: 100%;
     background-color: orange;
-    top: 200px;
+    top: 180px;
     position: relative;
 }
 
@@ -171,6 +203,18 @@ body {
     max-width: 1100px;
     position: relative;
     margin: 0 auto;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 90px;
+    background-color: blueviolet;
+    justify-items: center;
+    align-content:start;
 }
 .shadow{
     height: 130%;
@@ -193,11 +237,19 @@ body {
     transform: translateY(20px);
     /* cursor: pointer; */
 }
+.peopletext{
+    align-items: flex-start;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
 .portraittext{
     height: 100%;
     width: 100%;
     background-color: pink;
 }
+
 .portraits:hover{
     transform: translateY(10px);
     border: 2px solid rgba(165, 112, 13, 0.5);
@@ -217,7 +269,7 @@ body {
     width: 100%;
     height: 825px;
     background-color: magenta;
-    top: 230px;
+    top: 210px;
     position: relative;
 }
 
@@ -260,9 +312,21 @@ body {
 }
 
 .contact {
-    height: 600px;
+    height: 300px;
     width: 100%;
-    background-color: yellow;
+    background-color: rgba(207, 19, 19, 0.9);
+    position: relative;
+    top: 260px;
+}
+.contacttext{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1100px;
+    color: white;
 }
 
 #lightbox{
@@ -364,13 +428,13 @@ body {
         height: 100%;
     }
 
-    .wordleft {
-        right: 0;
+    .wordleftbox {
+        right: 0%;
         height: 50%;
         width: 100%;
     }
 
-    .wordright {
+    .wordrightbox {
         right: 0;
         height: 50%;
         width: 100%;

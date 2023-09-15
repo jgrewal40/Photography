@@ -12,8 +12,9 @@ function headCollapse() {
 
 const cars = document.querySelectorAll('.leftpic');
 const carsl = document.querySelectorAll('.rightpic');
-const wordl = document.querySelectorAll('.wordleft');
-const wordr = document.querySelectorAll('.wordright');
+const wordl = document.querySelectorAll('.wordleftbox');
+const wordr = document.querySelectorAll('.wordrightbox');
+const carsection = document.querySelectorAll('.cars');
 
 
 const observer = new IntersectionObserver(entries => {
