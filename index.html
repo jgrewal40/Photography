@@ -11,10 +11,17 @@
     <div class="headerHover" onmouseover="headExtend()" onmouseleave="headCollapse()">
         <div class="header" id="tophead"></div>
     </div>
+    <div class="navigationmenu">
+        <img src="assets\cars.png" class="buttons" onclick="document.getElementById('cars').scrollIntoView({ behavior: 'smooth' });">
+        <img src="assets\portraits.png" class="buttons" onclick="navigation('people')">
+        <img src="assets\nature.png" class="buttons" onclick="navigation('nature')">
+    </div>
 
     <div class="ProfileHeader">
         <div class="mebox">
-            <div class="title"></div>
+            <div class="title">
+                <a class="btn-shine"><b>GREWAL</b></a>
+            </div>
             <div class="profilebox">
             <img src="assets\me.jpg" class="profilePic">
             </div>
@@ -94,7 +101,7 @@
         <div class="peoplebody">
             <div class="wrapper">
                 <div class="shadow">
-                    <img src="people\alisha stadium.jpg" class="portraits" id="alisha" onclick="openlightbox()">
+                    <img src="people\alisha stadium.jpg" class="portraits" id="alisha">
                 </div>
                 <div class="shadow">
                     <img src="people\aman.jpg" class="portraits" id="aman">

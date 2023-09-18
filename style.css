@@ -7,8 +7,27 @@ body {
 
 .spaceholder{
     height: 600px;
-    width: 1100px;
-    background-color: green;
+    width: 10px;
+    /* background-color: green; */
+}
+.navigationmenu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: greenyellow;
+    top: 50%;
+    left: 2.2%;
+    transform: translate(-50%, -50%);
+    z-index: 7777;
+}
+.buttons{
+    height: 20%;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
 }
 
 .headerHover {
@@ -67,11 +86,12 @@ body {
 }
 
 .profilePic {
-    width: 250px;
+    width: 80%;
     height: 310px;
     position: relative;
     margin: 0 auto;
-    border: groove 15px white;
+    border: solid 3px goldenrod;
+    padding: 4px;
     border-radius: 25px;
 }
 
@@ -450,3 +470,84 @@ body {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-shine {
+    position: absolute;
+    top: 50%;
+    left:35%;
+    transform: translate(-50%, -50%);
+    padding: 12px 48px;
+    color: white;
+    background: linear-gradient(to right, #797979 0, rgb(252, 151, 0) 10%, #797979 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    font-size:170px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    10%{
+        background-position: 65px;
+    }
+    20%{
+        background-position: 130px;
+    }
+    30%{
+        background-position: 195px;
+    }
+    40% {
+        background-position: 260px;
+    }
+    50%{
+        background-position: 325px;
+    }
+    60%{
+        background-position: 390px;
+    }
+    70% {
+        background-position: 455px;
+    }
+    80% {
+        background-position: 520px;
+    }
+    90% {
+        background-position: 585px;
+    }
+    100% {
+        background-position: 650px;
+    }
+}
+

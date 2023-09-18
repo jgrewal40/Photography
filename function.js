@@ -46,7 +46,7 @@ wordr.forEach(word => {
 
 const lbimages = document.querySelectorAll('.portraits');
 const lightbox = document.createElement('div');
-lightbox.id = 'lightbox'
+lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
 
 
@@ -124,4 +124,22 @@ function naturehover() {
     })
 }
 naturehover();
+
+
+
+
+
+
+
+
+
+
+function navigation(section){
+    const jump = document.getElementById(section);
+    console.log("1");
+    if(!jump){
+        jump.scrollIntoView({ behavior: 'smooth'});
+        console.log("2");
+    }
+}
 
