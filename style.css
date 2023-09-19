@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     top: 50%;
     left: 2.2%;
     transform: translate(-50%, -50%);

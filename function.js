@@ -134,12 +134,30 @@ naturehover();
 
 
 
-function navigation(section){
-    const jump = document.getElementById(section);
-    console.log("1");
-    if(!jump){
-        jump.scrollIntoView({ behavior: 'smooth'});
-        console.log("2");
-    }
+function carnavigation(){
+    const jump = document.getElementById('cars');
+    jump.scrollIntoView({ behavior: 'smooth' });
 }
+
+function peoplenavigation(){
+    const jump = document.getElementById('people');
+    jump.scrollIntoView({ behavior: 'smooth' });
+}
+
+function naturenavigation(){
+    const jump = document.getElementById('nature');
+    jump.scrollIntoView({ behavior: 'smooth' });
+}
+
+// const buttons = document.querySelectorAll('.buttons');
+
+// function navigation(){
+//     buttons.forEach(but => {
+//         but.addEventListener('click', e =>{
+//             const sec = e.target.id;
+//             sec.scrollIntoView();
+//         })
+//     })
+// }
+// navigation();
 

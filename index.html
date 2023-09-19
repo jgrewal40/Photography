@@ -12,9 +12,9 @@
         <div class="header" id="tophead"></div>
     </div>
     <div class="navigationmenu">
-        <img src="assets\cars.png" class="buttons" onclick="document.getElementById('cars').scrollIntoView({ behavior: 'smooth' });">
-        <img src="assets\portraits.png" class="buttons" onclick="navigation('people')">
-        <img src="assets\nature.png" class="buttons" onclick="navigation('nature')">
+        <img src="assets\cars.png" class="buttons" onclick="carnavigation()">
+        <img src="assets\portraits.png" class="buttons" onclick="peoplenavigation()">
+        <img src="assets\nature.png" class="buttons" onclick="naturenavigation()">
     </div>
 
     <div class="ProfileHeader">
@@ -34,7 +34,7 @@
 
     <div class="spaceholder"></div>
 
-    <div class="cars">
+    <div class="cars" id="cars">
         <div class="section">
             <div class="leftpic">
                 <img src="cars\erv.jpg" class="carpics">
@@ -97,7 +97,7 @@
         </div>
     </div>
 
-    <div class="people">
+    <div class="people" id="people">
         <div class="peoplebody">
             <div class="wrapper">
                 <div class="shadow">
@@ -128,7 +128,7 @@
         </div>
     </div>
 
-    <div class="nature">
+    <div class="nature" id="nature">
         <div class="natureContainer">
             <div class="picturecollapse pictureactive">
                 <img src="nature\forestwalk.jpg" class="naturediv">
