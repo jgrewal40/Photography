@@ -86,6 +86,7 @@ lightbox.addEventListener('click', e => {
 
 
 const natprev = document.querySelectorAll('.naturediv');
+
 function natpreview() {
     natprev.forEach(nat => {
         nat.addEventListener('mouseenter', () => {
@@ -149,15 +150,5 @@ function naturenavigation(){
     jump.scrollIntoView({ behavior: 'smooth' });
 }
 
-// const buttons = document.querySelectorAll('.buttons');
 
-// function navigation(){
-//     buttons.forEach(but => {
-//         but.addEventListener('click', e =>{
-//             const sec = e.target.id;
-//             sec.scrollIntoView();
-//         })
-//     })
-// }
-// navigation();
 

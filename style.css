@@ -38,7 +38,7 @@ body {
     box-shadow: 0px 0px 10px 2px rgba(191, 133, 0, .9);
 }
 .subbuttons:hover{
-    box-shadow: 0px 0px 10px 2px rgba(191, 133, 0, .9);
+    box-shadow: 0px 0px 10px 2px rgba(191, 133, 0, .6);
 }
 
 /* .headerHover {
@@ -68,7 +68,7 @@ body {
 .ProfileHeader {
     width: 100%;
     height: 100%;
-    background-color: blue;
+    /* background-color: blue; */
     max-width: 1100px;
     margin: 0 auto;
     max-height: 500px;
@@ -79,7 +79,7 @@ body {
     width: 100%;
     height: 100%;
     max-height: 500px;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +88,7 @@ body {
     width: 30%;
     height: 100%;
     max-height: 500px;
-    background-color: orange;
+    /* background-color: orange; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@ body {
     height: 70%;
     position: relative;
     margin: 0 auto;
-    border: solid 3px goldenrod;
+    border: solid 3px rgba(191, 133, 0, 1);
     padding: 4px;
     border-radius: 25px;
 }
@@ -110,9 +110,10 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
+    border-radius: 4%;
     top: 135px;
 }
 .aboutmetext{
@@ -122,7 +123,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 0 auto;
 }
+
 
 .submenu{
     height: 100%;
@@ -135,6 +138,8 @@ body {
     position: relative;
     margin: 0 auto;
     top: 110px;
+    border-radius: 30px;
+    box-shadow:  0px 90px 100px 10px rgba(191, 133, 0, 1), inset 0px 0px 10px 0px rgba(191, 133, 0, 0.1);
 }
 .subbuttons{
     height: 30%;
@@ -159,6 +164,8 @@ a{
     margin: 0 auto;
     max-width: 1100px;
     gap: 30px;
+    padding: 2px;
+    box-shadow: 0px 90px 90px -110px rgba(191, 133, 0, 1),0px -90px 90px -110px rgba(191, 133, 0, 1);
 }
 
 .section {
@@ -316,7 +323,7 @@ a{
 .nature {
     width: 100%;
     height: 825px;
-    background-color: magenta;
+    /* background-color: magenta; */
     top: 550px;
     position: relative;
 }
@@ -332,22 +339,29 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: bisque;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1px;
+    border-radius: 30px;
+    box-shadow: 0px 90px 90px -110px rgba(191, 133, 0, 0.3),0px -90px 90px -110px rgba(191, 133, 0, 0.3), inset 0px 0px 90px 10px rgba(191, 133, 0, 0.05);
     gap: 7px;
 }
 
 .picturecollapse {
     width: 85%;
     height: 4.5%;
-    background-color: red;
+    /* background-color: red; */
     transition: 400ms ease-in-out;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .naturediv {
-    height: 700px;
+    height: 650px;
     width: 100%;
+    border-left: 8px solid rgba(191, 133, 0, 1);
+    padding: 5px;
+    transition: 200ms;
+    transform: translateX(0px);
 }
 
 .pictureactive {
@@ -355,7 +369,7 @@ a{
 }
 
 .naturehighlight{
-    border: 4px solid rgb(247, 2, 2);
+    border: 4px solid rgba(191, 133, 0, 1);
 
 }
 
@@ -529,7 +543,7 @@ a{
     width: 100%;
     max-height: 500px;
     color: white;
-    background: linear-gradient(to right, #797979 0, rgb(252, 151, 0) 10%, #797979 20%);
+    background: linear-gradient(to right, #797979 0, rgb(191, 133, 0) 10%, #797979 20%);
     background-position: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
