@@ -14,13 +14,15 @@ const cars = document.querySelectorAll('.leftpic');
 const carsl = document.querySelectorAll('.rightpic');
 const wordl = document.querySelectorAll('.wordleftbox');
 const wordr = document.querySelectorAll('.wordrightbox');
-const carsection = document.querySelectorAll('.cars');
+const portrait = document.querySelectorAll('.portraittext');
+const naturetext = document.querySelectorAll('.naturetext');
 
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
         if (entry.isIntersecting) observer.unobserve(entry.target);
+        console.log("JATTI");
     })
 },
     {
@@ -42,6 +44,13 @@ wordl.forEach(word => {
 wordr.forEach(word => {
     observer.observe(word);
 })
+portrait.forEach(pic => {
+    observer.observe(pic);
+})
+naturetext.forEach(nat =>{
+    observer.observe(nat);
+})
+
 
 
 const lbimages = document.querySelectorAll('.portraits');
