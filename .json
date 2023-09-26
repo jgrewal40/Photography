@@ -1,0 +1,44 @@
+{
+    "cars": [
+        {
+            "section": {
+                "leftpic": {
+                    "img": {
+                        "src": "cars\\erv.jpg",
+                        "class": "carpics"
+                    }
+                },
+                "wordrightbox": {
+                    "word": {
+                        "p": {
+                            "i": {
+                                "u": "Emily and Erv"
+                            },
+                            "br": null,
+                            "text": "His and Hers EVOs captured in a game of chase"
+                        }
+                    }
+                }
+            },
+            "section1": {
+                "rightpic": {
+                    "img":{
+                        "src": "cars\\senna.jpg",
+                        "class":"carpics"
+                    }
+                },
+                "wordleftbox": {
+                    "word":{
+                        "p":{
+                            "i":{
+                                "u": "GGA sennaVX"
+                            },
+                            "br": null,
+                            "text": "Tuned Senna spotted in Monteray at car week"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
