@@ -9,7 +9,7 @@
 
 <body>
     <div class="headerHover" onmouseover="headExtend()" onmouseleave="headCollapse()">
-        <div class="header" id="tophead"></div>
+        <div class="header" id="tophead" onload="loadCars();"></div>
     </div>
     <div class="navigationmenu">
         <img src="assets\cars.png" class="buttons" onclick="carnavigation()">
@@ -123,69 +123,9 @@
     <div class="pushdown">
         <div class="spaceholder"></div>
         <div class="carheading" id="cars">Cars</div>
-        <div class="cars">
-            <div class="section">
-                <div class="leftpic">
-                    <img src="cars\erv.jpg" class="carpics">
-                </div>
-                <div class="wordrightbox">
-                    <div class="word">
-                        <p class="cursive">Emily and Erv</p><p>His and Hers EVOs captured in a game of chase</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="rightpic">
-                    <img src="cars\senna.jpg" class="carpics">
-                </div>
-                <div class="wordleftbox">
-                    <div class="word">
-                        <p class="cursive">GGA sennaVX</p><p>Tuned Senna spotted in Monteray at car week</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="leftpic">
-                    <img src="cars\stang.jpg" class="carpics">
-                </div>
-                <div class="wordrightbox">
-                    <div class="word">
-                        <p class="cursive">SikhSpeed mustang GT500</p><p>SikhSpeed group spotted caravaning with a unique ar collection among friends</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="rightpic">
-                    <img src="cars\audi quatro.jpg" class="carpics">
-                </div>
-                <div class="wordleftbox">
-                    <div class="word">
-                        <p class="cursive">Audi Sport quattro S1 pikes peak</p><p>This legendary rally car won pikes peak hillclimb for 3 consecutive years in a row (1985-1987)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="leftpic">
-                    <img src="cars\pagani.jpg" class="carpics">
-                </div>
-                <div class="wordrightbox">
-                    <div class="word">
-                        <p class="cursive">Pagani X Rolex showcase</p><p>Laguna Seca parterened with Rolex and Pagani for a very unique car show and track day</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section">
-                <div class="rightpic">
-                    <img src="cars\mistral.jpg" class="carpics">
-                </div>
-                <div class="wordleftbox">
-                    <div class="word">
-                        <p class="cursive">Buggati Mistral 1 of 99</p><p>Car week 2022 Buggati unveiled the Mistral with only 99 examples in total being produced</p>
-                    </div>
-                </div>
-            </div>
+        <div class="cars" id="carsection">
+            <!-- see javascript and Json function loadcars() to see how this gets filled in-->
         </div>
-
         <div class="people" id="people">
             <div class="peoplebody">
                 <div class="peopletext">
