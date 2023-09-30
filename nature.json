@@ -1,0 +1,36 @@
+[
+    {
+        "img_src": "nature/quack.jpg",
+        "class_name": "picturecollapse pictureactive"
+    },
+    
+    {
+        "img_src": "nature/birdcage.jpg",
+        "class_name": "picturecollapse"
+    },
+
+    {
+        "img_src": "nature/bluejay.jpg",
+        "class_name": "picturecollapse"
+    },
+
+    {
+        "img_src": "nature/fly.jpg",
+        "class_name": "picturecollapse"
+    },
+
+    {
+        "img_src": "nature/indiahome.jpg",
+        "class_name": "picturecollapse"
+    },
+
+    {
+        "img_src": "nature/pots.jpg",
+        "class_name": "picturecollapse"
+    },
+
+    {
+        "img_src": "nature/akira grass.jpg",
+        "class_name": "picturecollapse"
+    }
+]

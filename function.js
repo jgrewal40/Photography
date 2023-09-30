@@ -31,23 +31,11 @@ const observer = new IntersectionObserver(entries => {
 
 
 
-const lbimages = document.querySelectorAll('.portraits');
+let lbimages;
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
 document.body.appendChild(lightbox);
 
-
-lbimages.forEach(img => {
-    img.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        const pic = document.createElement('img')
-        pic.src = img.src;
-        while (lightbox.firstChild) {
-            lightbox.removeChild(lightbox.firstChild);
-        }
-        lightbox.appendChild(pic);
-    })
-})
 
 lightbox.addEventListener('click', e => {
     if (e.target !== e.currentTarget) {
@@ -57,6 +45,12 @@ lightbox.addEventListener('click', e => {
 })
 
 
+portrait.forEach(pic => {
+    observer.observe(pic);
+})
+naturetext.forEach(nat => {
+    observer.observe(nat);
+})
 
 
 
@@ -71,47 +65,8 @@ lightbox.addEventListener('click', e => {
 
 
 
+let natprev;
 
-const natprev = document.querySelectorAll('.naturediv');
-
-function natpreview() {
-    natprev.forEach(nat => {
-        nat.addEventListener('mouseenter', () => {
-            nat.classList.add('naturehighlight');
-            const temp = nat.parentElement;
-            console.log(temp.classList);
-            if (!temp.classList.contains('pictureactive')) {
-                nat.classList.add('naturehighlight');
-            }
-            else {
-                nat.classList.remove('naturehighlight');
-            }
-            nat.addEventListener('mouseleave', () => {
-                nat.classList.remove('naturehighlight');
-            })
-        })
-    })
-}
-natpreview();
-
-
-const nature = document.querySelectorAll('.picturecollapse');
-function naturehover() {
-    nature.forEach(np => {
-        np.addEventListener('click', () => {
-            if (!np.classList.contains('pictureactive')) {
-                const temp = np;
-                nature.forEach(npr => {
-                    npr.classList.remove('pictureactive');
-                    temp.classList.add('pictureactive');
-                    const child = temp.querySelector('.naturediv');
-                    child.classList.remove('naturehighlight');
-                })
-            }
-        })
-    })
-}
-naturehover();
 
 
 
@@ -241,12 +196,104 @@ loadCars();
 
 
 
-portrait.forEach(pic => {
-    observer.observe(pic);
-})
-naturetext.forEach(nat => {
-    observer.observe(nat);
-})
+function loadportraits() {
+    fetch('portraits.json')
+        .then(response => response.json())
+        .then(portraits => {
+            const portraitparent = document.getElementById('portraitparent');
+
+            portraits.forEach(item => {
+                const shadow = document.createElement('div');
+                shadow.className = 'shadow';
+
+                const portraits = document.createElement('img');
+                portraits.className = 'portraits';
+                portraits.src = item.img_src;
+
+                portraitparent.appendChild(shadow);
+                shadow.appendChild(portraits);
+            })
+            lbimages = document.querySelectorAll('.portraits');
+            lbimages.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.classList.add('active');
+                    const pic = document.createElement('img')
+                    pic.src = img.src;
+                    while (lightbox.firstChild) {
+                        lightbox.removeChild(lightbox.firstChild);
+                    }
+                    lightbox.appendChild(pic);
+                })
+            })
+        })
+        .catch(error => console.error('Error loading JSON data:', error));
+}
+loadportraits();
+
+
+
+
+
+
+
+
+
+function loadnature() {
+    fetch('nature.json')
+        .then(response => response.json())
+        .then(natures => {
+            const natureparent = document.getElementById('naturecontainer');
+
+            natures.forEach(item => {
+
+                const picturecollapse = document.createElement('div');
+                picturecollapse.className = item.class_name;
+
+                const naturediv = document.createElement('img');
+                naturediv.className = 'naturediv';
+                naturediv.src = item.img_src;
+
+                natureparent.appendChild(picturecollapse);
+                picturecollapse.appendChild(naturediv);
+            })
+
+            natprev = document.querySelectorAll('.picturecollapse');
+            console.log(natprev);
+
+            natprev.forEach(nat => {
+                nat.addEventListener('mouseenter', () => {
+                    const temp = nat;
+                    console.log(temp.classList);
+                    if (!temp.classList.contains('pictureactive')) {
+                        nat.classList.add('naturehighlight');
+                    }
+                    else {
+                        nat.classList.remove('naturehighlight');
+                    }
+                    nat.addEventListener('mouseleave', () => {
+                        nat.classList.remove('naturehighlight');
+                    })
+                })
+            });
+
+            const nature = document.querySelectorAll('.picturecollapse');
+            nature.forEach(np => {
+                np.addEventListener('click', () => {
+                    if (!np.classList.contains('.pictureactive')) {
+                        const temp = np;
+                        nature.forEach(npr => {
+                            npr.classList.remove('pictureactive');
+                            temp.classList.add('pictureactive');
+                            temp.classList.remove('naturehighlight');
+                        })
+                    }
+                })
+            });
+
+        })
+        .catch(error => console.error('Error loading JSON data:', error));
+}
+loadnature();
 
 
 

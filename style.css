@@ -343,6 +343,7 @@ a{
     transition: 400ms ease-in-out;
     margin: 0 auto;
     overflow: hidden;
+    z-index: 111;
 }
 
 .naturediv {
@@ -359,7 +360,7 @@ a{
 }
 
 .naturehighlight{
-    border: 4px solid rgba(191, 133, 0, 1);
+    border-top: 4px solid rgba(191, 133, 0, 1);
 
 }
 .naturetext{
