@@ -65,17 +65,17 @@ naturetext.forEach(nat => {
 
 
 
+
+
+
+
+
+
+
+
+
+
 let natprev;
-
-
-
-
-
-
-
-
-
-
 
 function carnavigation() {
     const jump = document.getElementById('cars');
