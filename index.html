@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="style.css">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         photography
     </title>
@@ -10,91 +9,163 @@
 
 <body>
     <div class="headerHover" onmouseover="headExtend()" onmouseleave="headCollapse()">
-        <div class="header" id="tophead"></div>
+        <div class="header" id="tophead" onload="loadCars();"></div>
+    </div>
+    <div class="navigationmenu">
+        <img src="assets\cars.png" class="buttons" onclick="carnavigation()">
+        <img src="assets\portraits.png" class="buttons" onclick="peoplenavigation()">
+        <img src="assets\nature.png" class="buttons" onclick="naturenavigation()">
     </div>
 
     <div class="ProfileHeader">
-        <img src="assets\frame.png" class="profilePic">
+        <div class="mebox">
+            <div class="btn-shine">JASPINDER <br> GREWAL</div>
+            <div class="profilebox">
+                <img src="assets\me.jpg" class="profilePic">
+            </div>
+        </div>
     </div>
 
-    <div class="objective">
-        
+    <div class="submenu">
+        <div class="tooltip">
+            <img src="assets\instagram.png" class="subbuttons"
+                onclick="window.open('https://www.instagram.com/mighty_turban/', '_blank');">
+            <span class="tooltiptext">Instagram</span>
+        </div>
+        <div class="tooltip">
+            <img src="assets\message.png" class="subbuttons"
+                onclick="window.open('https://docs.google.com/forms/d/1wP1N4-fn13ARm3biejJWuNXnm6aDRPqZrjtEcw3bKmA/edit','_blank')">
+            <span class="tooltiptext">Contact</span>
+        </div>
     </div>
-
     <div class="aboutme">
+        <h1>
+            <span>My</span>
+            <span>name</span>
+            <span>is</span>
+            <span>Jaspinder(Jas).</span>
+            <span>I</span>
+            <span>have</span>
+            <span>been</span>
+            <span>doing</span>
+            <span>photography</span>
+            <span>since</span>
+            <span>2015.</span>
+            <span>I</span>
+            <span>first</span>
+            <span>discovered</span>
+            <span>photography</span>
+            <span>when</span>
+            <span>I</span>
+            <span>went</span>
+            <span>to</span>
+            <span>a</span>
+            <span>drift</span>
+            <span>event</span>
+            <span>and</span>
+            <span>asked</span>
+            <span>to</span>
+            <span>borrow</span>
+            <span>my</span>
+            <span>friends</span>
+            <span>DSLR.</span>
+            <span>I</span>
+            <span>was</span>
+            <span>on</span>
+            <span>the</span>
+            <span>track</span>
+            <span>taking</span>
+            <span>pictures</span>
+            <span>and</span>
+            <span>at</span>
+            <span>the</span>
+            <span>end</span>
+            <span>of</span>
+            <span>the</span>
+            <span>event,</span>
+            <span>posted</span>
+            <span>them</span>
+            <span>to</span>
+            <span>the</span>
+            <span>event</span>
+            <span>page</span>
+            <span>one</span>
+            <span>facebook</span>
+            <span>Word</span>
+            <span>quickly</span>
+            <span>spread</span>
+            <span>and</span>
+            <span>instantly,</span>
+            <span>people</span>
+            <span>were</span>
+            <span>messaging</span>
+            <span>me</span>
+            <span>saying</span>
+            <span>how</span>
+            <span>much</span>
+            <span>they</span>
+            <span>loved</span>
+            <span>the</span>
+            <span>photos.</span>
+            <span>it</span>
+            <span>was</span>
+            <span>there</span>
+            <span>i</span>
+            <span>discovered</span>
+            <span>my</span>
+            <span>knack</span>
+            <span>for</span>
+            <span>photography</span>
+
+
+        </h1>
     </div>
+    <div class="pushdown">
+        <div class="spaceholder"></div>
+        <div class="carheading" id="cars">Cars</div>
+        <div class="cars" id="carsection">
+            <!-- see javascript and Json function loadcars() to see how this gets filled in-->
+        </div>
+        <div class="people" id="people">
+            <div class="peoplebody">
+                <div class="peopletext">
+                    Portraits
+                </div>
+                <div class="portraittext">I don't aim to just capture images of people, but more so capture their
+                    personalties. Freeze a moment in time and give a glimpse about who this person is or might be. A
+                    picture truly does paint a thousand words. Check out some of my work below.
+                </div>
+                <div class="wrapper" id="portraitparent">
+                    <!--see javascript function loadportraits to see how its filled using Json-->
+                </div>
+            </div>
+        </div>
 
-    <div class="cars">
-        <div class="section">
-            <div class="leftpic">
-                <img src="cars\erv.jpg" class="carpics">
-            </div>
-            <div class="wordright">BIG BODY BENZ</div>
-        </div>
-        <div class="section">
-            <div class="rightpic">
-                <img src="cars\senna.jpg" class="carpics">
-            </div>
-            <div class="wordleft">BIG BODY BENZ</div>
-        </div>
-        <div class="section">
-            <div class="leftpic">
-                <img src="cars\stang.jpg" class="carpics">
-            </div>
-            <div class="wordright">BIG BODY BENZ</div>
-        </div>
-        <div class="section">
-            <div class="rightpic">
-                <img src="cars\audi quatro.jpg" class="carpics">
-            </div>
-            <div class="wordleft">BIG BODY BENZ</div>
-        </div>
-        <div class="section">
-            <div class="leftpic">
-                <img src="cars\pagani.jpg" class="carpics">
-            </div>
-            <div class="wordright">BIG BODY BENZ</div>
-        </div>
-        <div class="section">
-            <div class="rightpic">
-                <img src="cars\sennaroller.jpg" class="carpics">
-            </div>
-            <div class="wordleft">BIG BODY BENZ</div>
-        </div>
-    </div>
+        <div class="natureheading" id="nature">Nature</div>
 
-    <div class="people">
-        <div class="camerabox">
-            <img src="assets\frame.png" class="frame">
-            <div class="screen">
-                <img src="people\alisha stadium.jpg" class="screenpic" id="framepic">
+        <div class="nature">
+            <div class="natureContainer" id="naturecontainer">
+                <!--nature container with Json fills this in.-->
             </div>
-            <div class="nextButton" onclick="changepic('right')"></div>
-            <div class="backButton" onclick="changepic('left')"></div>
         </div>
-    </div>
+        <div class="naturetext">There is so much about the world we dont know and yet it changes so fast. Structures
+            comes and go and with it so does the enviroment and its natural inhabitants. Above is an expanding glimpse
+            as i venture into the nature genre.</div>
 
-    <div class="nature">
-        <div class="natureContainer">
-            <div class="picturecollapse pictureactive" id="0" onpointerenter="naturehover(0)" onclick="naturehover(0)" onpointerleave="natureOnLeave()">
-                <img src="nature\forestwalk.jpg" class="naturediv">
+
+
+        <div class="contact">
+            <div class="tooltip">
+                <img src="assets\instagram.png" class="subbuttons"
+                    onclick="window.open('https://www.instagram.com/mighty_turban/', '_blank');">
+                <span class="tooltiptext">Instagram</span>
             </div>
-            <div class="picturecollapse" id="1" onpointerenter="naturehover(1)" onclick="naturehover(1)" onpointerleave="natureOnLeave()">
-                <img src="nature\indiahome.jpg" class="naturediv">
-            </div>
-            <div class="picturecollapse" id="2" onpointerenter="naturehover(2)" onclick="naturehover(2)" onpointerleave="natureOnLeave()">
-                <img src="nature\pots.jpg" class="naturediv">
-            </div>
-            <div class="picturecollapse" id="3" onpointerenter="naturehover(3)" onclick="naturehover(3)" onpointerleave="natureOnLeave()">
-                <img src="nature\akira grass.jpg" class="naturediv">
-            </div>
-            <div class="picturecollapse" id="4" onpointerenter="naturehover(4)" onclick="naturehover(4)" onpointerleave="natureOnLeave()">
-                <img src="nature\snorlax.jpg" class="naturediv">
+            <div class="tooltip">
+                <img src="assets\message.png" class="subbuttons"
+                    onclick="window.open('https://docs.google.com/forms/d/1wP1N4-fn13ARm3biejJWuNXnm6aDRPqZrjtEcw3bKmA/edit','_blank')">
+                <span class="tooltiptext">Contact</span>
             </div>
         </div>
     </div>
-
-    <div class="contact"></div>
-
     <script src="function.js"></script>
 </body>
