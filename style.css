@@ -536,7 +536,8 @@ a {
 
 @media(max-width: 1100px) {
   body{
-    overflow-x: hidden;
+    overflow: hidden;
+    overflow-y: auto;
   }
   .section {
     display: flex;
