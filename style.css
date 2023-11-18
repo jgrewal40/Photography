@@ -479,7 +479,7 @@ a {
   z-index: 1;
   top: 100%;
   right: -60%;
-
+  
 }
 
 .tooltip:hover .tooltiptext {
@@ -535,34 +535,31 @@ a {
 
 
 @media(max-width: 1100px) {
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
+  body{
+    
   }
-
   .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 780px;
     height: 700px;
     align-self: center;
   }
 
   .rightpic {
     right: 0;
-    height: 100%;
+    height: 50%;
     width: auto;
   }
 
   .leftpic {
-    height: 100%;
+    height: 50%;
     width: auto;
   }
 
   .carpics {
     height: 100%;
-    width: auto;
   }
 
   .wordleftbox {
@@ -576,16 +573,9 @@ a {
     height: 50%;
     width: 100%;
   }
-  .natureContainer{
-    max-width: 980px;
-  }
 }
 
 @media(max-width: 500px) {
-  body{
-    max-width: 100%;
-    overflow-x: hidden;
-  }
   .naturediv {
     height: 400px;
     width: 100%;
