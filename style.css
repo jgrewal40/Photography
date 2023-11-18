@@ -577,6 +577,10 @@ a {
 }
 
 @media(max-width: 500px) {
+  body{
+    width: 100%;
+    overflow-x: hidden;
+  }
   .naturediv {
     height: 400px;
     width: 100%;
