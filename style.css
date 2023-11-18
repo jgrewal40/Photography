@@ -536,7 +536,7 @@ a {
 
 @media(max-width: 1100px) {
   body{
-    width: 100%;
+    max-width: 1100px;
     overflow-x: hidden;
   }
   .section {
@@ -575,13 +575,13 @@ a {
     width: 100%;
   }
   .natureContainer{
-    width: auto;
+    width: 100%;
   }
 }
 
 @media(max-width: 500px) {
   body{
-    width: 100%;
+    max-width: 500px;
     overflow-x: hidden;
   }
   .naturediv {
