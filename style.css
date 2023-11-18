@@ -550,33 +550,37 @@ a {
 
   .rightpic {
     right: 0;
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 
   .leftpic {
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 
   .carpics {
     height: 100%;
+    width: auto;
   }
 
   .wordleftbox {
     right: 0%;
-    height: 50%;
+    height: 70%;
     width: 100%;
   }
 
   .wordrightbox {
     right: 0;
-    height: 50%;
+    height: 70%;
     width: 100%;
   }
 }
 
 @media(max-width: 500px) {
+  body{
+    width: 100%;
+  }
   .naturediv {
     height: 400px;
     width: 100%;
