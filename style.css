@@ -536,7 +536,8 @@ a {
 
 @media(max-width: 1100px) {
   body {
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .section {
@@ -550,17 +551,18 @@ a {
 
   .rightpic {
     right: 0;
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 
   .leftpic {
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 
   .carpics {
     height: 100%;
+    width: auto;
   }
 
   .wordleftbox {
@@ -578,7 +580,8 @@ a {
 
 @media(max-width: 500px) {
   body{
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .naturediv {
     height: 400px;
