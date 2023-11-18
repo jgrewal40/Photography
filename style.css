@@ -550,29 +550,28 @@ a {
 
   .rightpic {
     right: 0;
-    height: 100%;
+    height: 50%;
     width: auto;
   }
 
   .leftpic {
-    height: 100%;
+    height: 50%;
     width: auto;
   }
 
   .carpics {
     height: 100%;
-    width: auto;
   }
 
   .wordleftbox {
     right: 0%;
-    height: 70%;
+    height: 50%;
     width: 100%;
   }
 
   .wordrightbox {
     right: 0;
-    height: 70%;
+    height: 50%;
     width: 100%;
   }
 }
