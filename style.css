@@ -574,6 +574,9 @@ a {
     height: 50%;
     width: 100%;
   }
+  .natureContainer{
+    width: auto;
+  }
 }
 
 @media(max-width: 500px) {
